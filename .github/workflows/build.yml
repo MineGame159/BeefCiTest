@@ -33,6 +33,21 @@ jobs:
         shell: cmd
         run: 7z x BeefBuild.exe -oBeef
       
+      - name: Setup Python
+        uses: actions/setup-python@v3.1.2
+      
+      - name: Install TOML through Pip
+        shell: cmd
+        run: pip install toml
+      
+      - name: Modify BeefSpace.toml to point to local dependencies
+        shell: cmd
+        run: python .github/modify_beefspace.py
+      
+      - name: Build
+        shell: cmd
+        run: Beef/bin/BeefBuild.exe -config=Release
+      
       - name: List files
         shell: cmd
-        run: ls
+        run: ls build/Release_Win64
