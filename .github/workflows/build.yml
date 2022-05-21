@@ -36,11 +36,11 @@ jobs:
       - name: Copy __user folder
         shell: powershell
         run: cp Beef/__user/* .
+        
+      - name: List files
+        shell: powershell
+        run: ls build/Release_Win64
       
       - name: Build
         shell: powershell
         run: Beef/bin/BeefBuild.exe -config=Release
-      
-      - name: List files
-        shell: powershell
-        run: ls build/Release_Win64
