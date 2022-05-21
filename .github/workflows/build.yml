@@ -35,4 +35,4 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          path: build/Release_Win64/*.exe
+          path: build/Release_Win64/Test/*.exe
