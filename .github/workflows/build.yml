@@ -31,3 +31,8 @@ jobs:
       - name: Build
         shell: powershell
         run: Beef/bin/BeefBuild.exe -config=Release
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          path: build/Release_Win64/*.exe
