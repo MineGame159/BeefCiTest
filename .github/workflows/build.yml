@@ -23,13 +23,10 @@ jobs:
         shell: powershell
         run: 7z x BeefBuild.exe -oBeef
       
-      - name: Copy __user folder
+      - name: Write BeefConfig.toml
         shell: powershell
-        run: Copy-Item -Path Beef/__user/* -Destination . -Recurse
-        
-      - name: List files
-        shell: powershell
-        run: ls
+        run: |
+          "Version = 1`nUnversionedLibDirs = [`"Beef/BeefLibs`"]" | Out-File -FilePath "BeefConfig.toml"
       
       - name: Build
         shell: powershell
