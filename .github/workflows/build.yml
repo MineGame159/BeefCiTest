@@ -46,7 +46,7 @@ jobs:
       
       - name: Build
         shell: cmd
-        run: Beef/bin/BeefBuild.exe -config=Release
+        run: ./Beef/bin/BeefBuild.exe -config=Release
       
       - name: List files
         shell: cmd
