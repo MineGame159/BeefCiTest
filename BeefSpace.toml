@@ -1,0 +1,11 @@
+FileVersion = 1
+Projects = {Test = {Path = "."}, corlib = "*"}
+
+[Workspace]
+StartupProject = "Test"
+
+[Configs.Test.Win32]
+ConfigSelections = {Test = {Config = "Debug"}}
+
+[Configs.Test.Win64]
+ConfigSelections = {Test = {Config = "Debug"}}
