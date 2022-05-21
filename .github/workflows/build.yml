@@ -26,11 +26,11 @@ jobs:
       - name: Copy __user folder
         shell: powershell
         run: Copy-Item -Path Beef/__user/* -Destination . -Recurse
+        
+      - name: List files
+        shell: powershell
+        run: ls
       
       - name: Build
         shell: powershell
         run: Beef/bin/BeefBuild.exe -config=Release
-      
-      - name: List files
-        shell: powershell
-        run: ls build/Release_Win64
