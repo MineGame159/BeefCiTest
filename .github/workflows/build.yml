@@ -39,7 +39,7 @@ jobs:
         
       - name: List files
         shell: powershell
-        run: ls build/Release_Win64
+        run: ls
       
       - name: Build
         shell: powershell
